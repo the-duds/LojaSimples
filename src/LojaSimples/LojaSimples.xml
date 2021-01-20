@@ -1,0 +1,221 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>LojaSimples</name>
+    </assembly>
+    <members>
+        <member name="T:LojaSimples.Controllers.PedidoController">
+            <summary>
+            Controller responsavel por pedido.
+            </summary>
+        </member>
+        <member name="M:LojaSimples.Controllers.PedidoController.#ctor(FluentMediator.IMediator)">
+            <summary>
+            Controller responsável por rotas relacionadas a Pedido.
+            </summary>
+            <param name="mediator">Interface de mediator para chamar os use case da aplicação.</param>
+        </member>
+        <member name="M:LojaSimples.Controllers.PedidoController.PostPedido(LojaSimples.Application.ViewModel.PedidoModel,LojaSimples.Presenter.PedidoPresenter)">
+            <summary>
+            Cadastra Pedido.
+            </summary>
+            <param name="pedido">Dados do pedido.</param>
+            <param name="presenter">Presenter de Retorno.</param>
+            <returns>Retorna resultado da operação.</returns>
+        </member>
+        <member name="M:LojaSimples.Controllers.PedidoController.DeletPedido(System.String,LojaSimples.Presenter.PedidoPresenter)">
+            <summary>
+            Deleta Pedido.
+            </summary>
+            <param name="presenter">Presenter de Retorno.</param>
+            <returns>Retorna resultado da operação.</returns>
+        </member>
+        <member name="T:LojaSimples.Controllers.ProdutoController">
+            <summary>
+            Controller responsavel por Produto
+            </summary>
+        </member>
+        <member name="M:LojaSimples.Controllers.ProdutoController.#ctor(FluentMediator.IMediator)">
+            <summary>
+            Controller responsável por rotas relacionadas a Produto.
+            </summary>
+            <param name="mediator">Interface de mediator para chamar os use case da aplicação.</param>
+        </member>
+        <member name="M:LojaSimples.Controllers.ProdutoController.GetTudo(LojaSimples.Presenter.ProdutoPresenter)">
+            <summary>
+            Lista todos os Produto.
+            </summary>
+            <param name="presenter">Presenter de Retorno.</param>
+            <returns>Retorna resultado da operação.</returns>
+        </member>
+        <member name="M:LojaSimples.Controllers.ProdutoController.GetTudo(System.String,LojaSimples.Presenter.ProdutoPresenter)">
+            <summary>
+            Lista Produto por id.
+            </summary>
+            <param name="presenter">Presenter de Retorno.</param>
+            <returns>Retorna resultado da operação.</returns>
+        </member>
+        <member name="M:LojaSimples.Controllers.ProdutoController.PostProduto(LojaSimples.Application.ViewModel.ProdutoModel,LojaSimples.Presenter.ProdutoPresenter)">
+            <summary>
+            Cadastra Produto.
+            </summary>
+            <param name="produto">Dados do produto.</param>
+            <param name="presenter">Presenter de Retorno.</param>
+            <returns>Retorna resultado da operação.</returns>
+        </member>
+        <member name="M:LojaSimples.Controllers.ProdutoController.PutProduto(LojaSimples.Application.ViewModel.ProdutoModel,LojaSimples.Presenter.ProdutoPresenter)">
+            <summary>
+            Altera Produto.
+            </summary>
+            <param name="produto">Dados do produto.</param>
+            <param name="presenter">Presenter de Retorno.</param>
+            <returns>Retorna resultado da operação.</returns>
+        </member>
+        <member name="M:LojaSimples.Controllers.ProdutoController.DeletProduto(System.String,LojaSimples.Presenter.ProdutoPresenter)">
+            <summary>
+            Deleta Produto.
+            </summary>
+            <param name="presenter">Presenter de Retorno.</param>
+            <returns>Retorna resultado da operação.</returns>
+        </member>
+        <member name="P:LojaSimples.Models.ErrorModel.Erros">
+            <summary>
+            Erros das notificações.
+            </summary>
+        </member>
+        <member name="M:LojaSimples.Models.ErrorModel.#ctor(System.String)">
+            <summary>
+            Construtor
+            </summary>
+            <param name="erro">Nome do erro.</param>
+        </member>
+        <member name="M:LojaSimples.Models.ErrorModel.#ctor(System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Define lista de erros.
+            </summary>
+            <param name="erros">Lista de todos erros.</param>
+        </member>
+        <member name="M:LojaSimples.Models.ErrorModel.#ctor(System.Collections.Generic.IReadOnlyCollection{Flunt.Notifications.Notification})">
+            <summary>
+            Passa notificações dos erros.
+            </summary>
+            <param name="notifications">Notificações</param>
+        </member>
+        <member name="M:LojaSimples.Modulos.FluentMediatorExtensions.AddMediator(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Metodo chamado no startup para registrar o Mediator
+            </summary>
+            <param name="services">Serviço de Mediator</param>
+            <returns></returns>
+        </member>
+        <member name="M:LojaSimples.Modulos.PresenterExtensions.AddPresenters(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Metodo chamado no startup para registrar os Presenter
+            </summary>
+            <param name="services">Serviço de Presenter</param>
+            <returns></returns>
+        </member>
+        <member name="T:LojaSimples.Modulos.UseCaseExtensions">
+            <summary>
+            Registro de UseCase
+            </summary>
+        </member>
+        <member name="M:LojaSimples.Modulos.UseCaseExtensions.AddUseCases(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Metodo chamado no startup para registrar os UseCase
+            </summary>
+            <param name="services">Serviço de UseCase</param>
+            <returns></returns>
+        </member>
+        <member name="P:LojaSimples.Presenter.ItensPedidoPresenter.ViewModel">
+            <summary>
+            O resultado viewmodel da rota.
+            </summary>
+            <returns>IActionResult</returns>
+        </member>
+        <member name="M:LojaSimples.Presenter.ItensPedidoPresenter.NotFound(System.String)">
+            <summary>
+            Produz o resultado 404 notfound.
+            </summary>
+            <param name="message">Output da rota.</param>
+        </member>
+        <member name="M:LojaSimples.Presenter.ItensPedidoPresenter.Success(LojaSimples.Application.Interfaces.Boundaries.Pedido.ItemPedidoOutput)">
+            <summary>
+            Produz o resultado de sucesso do endpoint.
+            </summary>
+            <param name="output">Output da rota.</param>
+        </member>
+        <member name="M:LojaSimples.Presenter.ItensPedidoPresenter.WriteError(System.String)">
+            <summary>
+            Produz o resultado bad request 400, de forma amigável
+            </summary>
+            <param name="message">Output da rota.</param>
+        </member>
+        <member name="M:LojaSimples.Presenter.ItensPedidoPresenter.WriteError(System.Collections.Generic.IReadOnlyCollection{Flunt.Notifications.Notification})">
+            <summary>
+            Produz o resultado bad request 400, de forma amigável
+            </summary>
+            <param name="errors">Coleção de erros de validação de dados.</param>
+        </member>
+        <member name="P:LojaSimples.Presenter.PedidoPresenter.ViewModel">
+            <summary>
+            O resultado viewmodel da rota.
+            </summary>
+            <returns>IActionResult</returns>
+        </member>
+        <member name="M:LojaSimples.Presenter.PedidoPresenter.NotFound(System.String)">
+            <summary>
+            Produz o resultado 404 notfound.
+            </summary>
+            <param name="message">Output da rota.</param>
+        </member>
+        <member name="M:LojaSimples.Presenter.PedidoPresenter.Success(LojaSimples.Application.Interfaces.Boundaries.Pedido.PedidoOutput)">
+            <summary>
+            Produz o resultado de sucesso do endpoint.
+            </summary>
+            <param name="output">Output da rota.</param>
+        </member>
+        <member name="M:LojaSimples.Presenter.PedidoPresenter.WriteError(System.String)">
+            <summary>
+            Produz o resultado bad request 400, de forma amigável
+            </summary>
+            <param name="message">Output da rota.</param>
+        </member>
+        <member name="M:LojaSimples.Presenter.PedidoPresenter.WriteError(System.Collections.Generic.IReadOnlyCollection{Flunt.Notifications.Notification})">
+            <summary>
+            Produz o resultado bad request 400, de forma amigável
+            </summary>
+            <param name="errors">Coleção de erros de validação de dados.</param>
+        </member>
+        <member name="P:LojaSimples.Presenter.ProdutoPresenter.ViewModel">
+            <summary>
+            O resultado viewmodel da rota.
+            </summary>
+            <returns>IActionResult</returns>
+        </member>
+        <member name="M:LojaSimples.Presenter.ProdutoPresenter.NotFound(System.String)">
+            <summary>
+            Produz o resultado 404 notfound.
+            </summary>
+            <param name="message">Output da rota.</param>
+        </member>
+        <member name="M:LojaSimples.Presenter.ProdutoPresenter.Success(LojaSimples.Application.Interfaces.Boundaries.Produto.ProdutoOutput)">
+            <summary>
+            Produz o resultado de sucesso do endpoint.
+            </summary>
+            <param name="output">Output da rota.</param>
+        </member>
+        <member name="M:LojaSimples.Presenter.ProdutoPresenter.WriteError(System.String)">
+            <summary>
+            Produz o resultado bad request 400, de forma amigável
+            </summary>
+            <param name="message">Output da rota.</param>
+        </member>
+        <member name="M:LojaSimples.Presenter.ProdutoPresenter.WriteError(System.Collections.Generic.IReadOnlyCollection{Flunt.Notifications.Notification})">
+            <summary>
+            Produz o resultado bad request 400, de forma amigável
+            </summary>
+            <param name="errors">Coleção de erros de validação de dados.</param>
+        </member>
+    </members>
+</doc>

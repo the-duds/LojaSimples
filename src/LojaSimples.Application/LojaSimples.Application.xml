@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>LojaSimples.Application</name>
+    </assembly>
+    <members>
+        <member name="T:LojaSimples.Application.Interfaces.Boundaries.IOutputPortError">
+            <summary>
+            Interface output de erro.
+            </summary>
+        </member>
+        <member name="M:LojaSimples.Application.Interfaces.Boundaries.IOutputPortError.WriteError(System.String)">
+            <summary>
+            Informa que um erro ocorreu.
+            </summary>
+            <param name="message">Descrição do erro.</param>
+        </member>
+        <member name="M:LojaSimples.Application.Interfaces.Boundaries.IOutputPortError.WriteError(System.Collections.Generic.IReadOnlyCollection{Flunt.Notifications.Notification})">
+            <summary>
+            Informa notificação de validação de erros.
+            </summary>
+            <param name="errors">Erros na validação de dados.</param>
+        </member>
+        <member name="M:LojaSimples.Application.Interfaces.Boundaries.IOutputPortNotFound.NotFound(System.String)">
+            <summary>
+            Informa que o recurso procurado não foi encontrado.
+            </summary>
+            <param name="message">Descrição do erro.</param>
+        </member>
+        <member name="M:LojaSimples.Application.Interfaces.Boundaries.IOutputPortStandard`1.Success(`0)">
+            <summary>
+             Registra o retorno normal de uma application.
+            </summary>
+            <param name="output">O output da mensagem da application</param>
+        </member>
+        <member name="M:LojaSimples.Application.Interfaces.Boundaries.IUseCase`1.Execute(`0)">
+            <summary>
+            Executa o método da classe de aplicação.
+            </summary>
+            <param name="input">Input a ser trabalhado.</param>
+            <returns>Retorna uma task.</returns>
+        </member>
+        <member name="T:LojaSimples.Application.ViewModel.PedidoModel">
+            <summary>
+            Pedido
+            </summary>
+        </member>
+        <member name="P:LojaSimples.Application.ViewModel.PedidoModel.Cpf">
+            <summary>
+            Cpf
+            </summary>
+        </member>
+        <member name="P:LojaSimples.Application.ViewModel.PedidoModel.ValorTotal">
+            <summary>
+            Valot
+            </summary>
+        </member>
+        <member name="P:LojaSimples.Application.ViewModel.PedidoModel.ListaItens">
+            <summary>
+            Lista de Itens
+            </summary>
+        </member>
+        <member name="T:LojaSimples.Application.ViewModel.ProdutoModel">
+            <summary>
+            Produto
+            </summary>
+        </member>
+        <member name="P:LojaSimples.Application.ViewModel.ProdutoModel.Nome">
+            <summary>
+            Nome
+            </summary>
+        </member>
+        <member name="P:LojaSimples.Application.ViewModel.ProdutoModel.Categoria">
+            <summary>
+            Categoria
+            </summary>
+        </member>
+        <member name="P:LojaSimples.Application.ViewModel.ProdutoModel.Valor">
+            <summary>
+            Valor
+            </summary>
+        </member>
+    </members>
+</doc>
